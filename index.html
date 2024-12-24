@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue-cinema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- banner -->
+    <div class="banner">
+      <div class="container d-flex justify-content-center py-4">
+        <i class="fa-solid fa-film"></i>
+        <p>
+          See no special offer <br />
+          restrictions
+        </p>
+      </div>
+    </div>
+    <!-- banner end -->
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark p-md-0 py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-end" href="#"
+          ><img src="./images/logo.png" alt="" />
+          <span class="lh-1">CINEMAS</span>
+        </a>
+        <ul class="navbar-nav d-md-flex d-none flex-row gap-5 mt-5">
+          <li>
+            <a href="#!" class="navbar-links text-decoration-none">Films</a>
+          </li>
+          <li>
+            <a href="#!" class="navbar-links text-decoration-none">Serials</a>
+          </li>
+          <li>
+            <a href="#!" class="navbar-links text-decoration-none">Cartoons</a>
+          </li>
+          <li>
+            <a href="#!" class="navbar-links text-decoration-none"
+              >Collections</a
+            >
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler d-md-none d-flex"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Dark offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header -->
+    <header class="header">
+      <div class="header-bg h-100 w-100">
+        <div class="container d-flex flex-column justify-content-center h-100">
+          <h2 class="display-2 fw-bold text-montserrat">Kong: Skull Island</h2>
+          <p class="text-montserrat">
+            The film takes the viewer to the 70s of the last century. The
+            protagonist organizes an expedition to the Skull island, always
+            covered in fog, on which King Kong was once caught to find the
+            missing brother and some mysterious substance. During...
+          </p>
+          <div
+            class="button-box mt-5 d-flex flex-sm-row flex-column align-items-center gap-4"
+          >
+            <button class="button">Watch now</button>
+            <button class="button">Download</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <!-- films -->
+    <section class="films bg-darken-blue">
+      <div class="container">
+        <h2 class="section-title">Films</h2>
+        <div class="row justify-content-around gy-4">
+          <div class="col-xl-3 col-lg-4 col-sm-6 col-10 overflow-hidden">
+            <div class="films-card position-relative rounded-3">
+              <img
+                class="position-absolute film-img w-100 h-100"
+                src="./images/film-1.png"
+                alt=""
+              />
+              <div
+                class="films-card__bg h-100 w-100 position-absolute d-flex flex-column align-items-center pt-5 px-3 pb-3 justify-content-around"
+              >
+                <i class="fa-solid fa-play"></i>
+                <span class="border rounded-4 py-1 px-4">2:14:33</span>
+                <h3>Black Panther</h3>
+                <p>
+                  At first glance, you can decide that Wakanda is an ordinary
+                  territory of wild Africa, but this is not so. Here, in the
+                  bowels of the desert lands, there are hidden deposits of a
+                  unique metal capable of absorbing...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 col-10 overflow-hidden">
+            <div class="films-card position-relative rounded-3">
+              <img
+                class="position-absolute film-img w-100 h-100"
+                src="./images/film-1.png"
+                alt=""
+              />
+              <div
+                class="films-card__bg h-100 w-100 position-absolute d-flex flex-column align-items-center pt-5 px-3 pb-3 justify-content-around"
+              >
+                <i class="fa-solid fa-play"></i>
+                <span class="border rounded-4 py-1 px-4">2:14:33</span>
+                <h3>Black Panther</h3>
+                <p>
+                  At first glance, you can decide that Wakanda is an ordinary
+                  territory of wild Africa, but this is not so. Here, in the
+                  bowels of the desert lands, there are hidden deposits of a
+                  unique metal capable of absorbing...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 col-10 overflow-hidden">
+            <div class="films-card position-relative rounded-3">
+              <img
+                class="position-absolute film-img w-100 h-100"
+                src="./images/film-1.png"
+                alt=""
+              />
+              <div
+                class="films-card__bg h-100 w-100 position-absolute d-flex flex-column align-items-center pt-5 px-3 pb-3 justify-content-around"
+              >
+                <i class="fa-solid fa-play"></i>
+                <span class="border rounded-4 py-1 px-4">2:14:33</span>
+                <h3>Black Panther</h3>
+                <p>
+                  At first glance, you can decide that Wakanda is an ordinary
+                  territory of wild Africa, but this is not so. Here, in the
+                  bowels of the desert lands, there are hidden deposits of a
+                  unique metal capable of absorbing...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-sm-6 col-10 overflow-hidden">
+            <div class="films-card position-relative rounded-3">
+              <img
+                class="position-absolute film-img w-100 h-100"
+                src="./images/film-1.png"
+                alt=""
+              />
+              <div
+                class="films-card__bg h-100 w-100 position-absolute d-flex flex-column align-items-center pt-5 px-3 pb-3 justify-content-around"
+              >
+                <i class="fa-solid fa-play"></i>
+                <span class="border rounded-4 py-1 px-4">2:14:33</span>
+                <h3>Black Panther</h3>
+                <p>
+                  At first glance, you can decide that Wakanda is an ordinary
+                  territory of wild Africa, but this is not so. Here, in the
+                  bowels of the desert lands, there are hidden deposits of a
+                  unique metal capable of absorbing...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- films end -->
+    <!-- premyera -->
+    <section class="premyera position-relative">
+      <div
+        class="container z-3 position-relative d-flex align-items-center h-100"
+      >
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="">
+              <img
+                class="img-fluid mt-5"
+                src="./images/black-widow.png"
+                alt=""
+              />
+              <p class="text-dark my-5">
+                After the events at the Leipzig-Halle airport, Natasha was
+                overtaken by the mistakes of the past. The Red Room again made
+                itself felt - a program to create Widows - professional killers
+                and spies - just like her. Natasha decides once and for all to
+                deal with people whose efforts she herself became a Widow.
+              </p>
+              <button class="button mb-4">Watch now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="premyera-content w-100 h-100 position-absolute top-0 z-1"
+      ></div>
+      <video
+        class="position-absolute top-0 end-0 z-0 h-100"
+        src="./images/bg-video.mp4"
+        autoplay
+        loop
+        muted
+      ></video>
+    </section>
+    <!-- premyera end -->
+    <!-- collections -->
+    <section class="collection bg-darken-blue py-5">
+      <div class="container">
+        <h2 class="section-title">Collections</h2>
+        <div class="row gy-4 justify-content-around">
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="collection-card overflow-hidden position-relative">
+              <img
+                class="collection-img position-absolute w-100 h-100 z-2"
+                src="./images/collection-1.png"
+                alt=""
+              />
+              <div
+                class="collection-content position-absolute position-relative d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-2 z-3"
+              >
+                <i class="fa-solid fa-play"></i>
+                <h4>All Marvel Films</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="collection-card overflow-hidden position-relative">
+              <img
+                class="collection-img position-absolute w-100 h-100 z-2"
+                src="./images/collection-1.png"
+                alt=""
+              />
+              <div
+                class="collection-content position-absolute position-relative d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-2 z-3"
+              >
+                <i class="fa-solid fa-play"></i>
+                <h4>All Marvel Films</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="collection-card overflow-hidden position-relative">
+              <img
+                class="collection-img position-absolute w-100 h-100 z-2"
+                src="./images/collection-1.png"
+                alt=""
+              />
+              <div
+                class="collection-content position-absolute position-relative d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-2 z-3"
+              >
+                <i class="fa-solid fa-play"></i>
+                <h4>All Marvel Films</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- collections end -->
+    <!-- series -->
+    <section class="series bg-darken-blue">
+      <div class="container">
+        <h2 class="section-title">Series</h2>
+        <div class="row gy-4">
+          <div class="col-12">
+            <div class="series-big__card position-relative">
+              <img
+                class="position-absolute w-100 h-100"
+                src="./images/series-1.png"
+                alt=""
+              />
+              <div class="series-big__card--content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center px-5 text-center gap-4">
+                <h3>Game of Thrones</h3>
+                <p>
+                  The time of prosperity is drawing to a close, and the summer,
+                  which lasted almost a decade, is dying away. Around the center
+                  of power of the Seven Kingdoms, the Iron Throne, a conspiracy
+                  is ripening, and during this difficult time, the king decides
+                  to seek support from his youth friend Eddard Stark. In a world
+                  where everyone - from the king to the mercenary - is eager for
+                  power, intrigues and is ready to stick a knife in the back,
+                  there is ...
+                </p>
+                <button class="button">Watch now</button>
+              </div>
+            </div>
+          </div>  
+          <div class="col-lg-6">
+            <div class="series-big__card series-medium__card h-100 position-relative">
+              <img class="position-absolute w-100 h-100" src="./images/series-2.png" alt="">
+              <div class="series-big__card--content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center px-5 text-center gap-4">
+                <i class="fa-solid fa-play"></i>
+                <h4>Wanda Vision</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row gy-4">
+              <div class="col-6">
+                <div class="series-big__card series-small__card position-relative">
+                  <img class="position-absolute w-100 h-100" src="./images/series-3.png" alt="">
+                  <div class="series-big__card--content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center px-5 text-center gap-4">
+                    <i class="fa-solid fa-play"></i>
+                    <h4>Wanda Vision</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="series-big__card series-small__card position-relative">
+                  <img class="position-absolute w-100 h-100" src="./images/series-4.png" alt="">
+                  <div class="series-big__card--content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center px-5 text-center gap-4">
+                    <i class="fa-solid fa-play"></i>
+                    <h4>Wanda Vision</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="series-big__card series-small__card position-relative">
+                  <img class="position-absolute w-100 h-100" src="./images/series-5.png" alt="">
+                  <div class="series-big__card--content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center px-5 text-center gap-4">
+                    <i class="fa-solid fa-play"></i>
+                    <h4>Wanda Vision</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="series-big__card series-small__card position-relative">
+                  <img class="position-absolute w-100 h-100" src="./images/series-6.png" alt="">
+                  <div class="series-big__card--content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center px-5 text-center gap-4">
+                    <i class="fa-solid fa-play"></i>
+                    <h4>Wanda Vision</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- series end -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
